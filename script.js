@@ -1,4 +1,4 @@
-const admins = ["9491358278","9121123345","9989634265",9492860750"];
+const admins = ["9491358278","9121123345"];
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZmYTlXGbNNlOc47MRz2vAUqbewTI9AatwZMxcHFntcD_KYgutaH3jSD3i9VPJ2Eh_/exec";
 
 let allMembers = [];
