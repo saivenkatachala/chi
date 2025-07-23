@@ -1,0 +1,56 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        margin: 30px auto;
+    }
+    
+    .input-group input {
+        padding: 10px 15px 10px 35px;
+    }
+    
+    .modal-content {
+        margin: 30% auto;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chitti Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="login-box" id="loginBox">
+    <h2>Admin Login</h2>
+    <input id="username" placeholder="Enter Mobile Number">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="container" id="mainApp" style="display:none;">
+    <h1>Chitti Management System</h1>
+
+    <div class="button-group">
+      <button onclick="showSection('addBatch')"><i class="fa-solid fa-plus"></i>Add Batch</button>
+      <button onclick="showSection('addMember')"><i class="fa-solid fa-user-plus"></i>Add Member</button>
+      <button onclick="showSection('viewMembers')"><i class="fa-solid fa-users"></i>View Members</button>
+      <button onclick="showSection('addWinner')"><i class="fa-solid fa-trophy"></i>Add Winner</button>
+    </div>
+
+    <div id="addBatch" class="section">
+      <h2>Add Batch</h2>
+      <input id="batchName" placeholder="Batch Name">
+      <button onclick="createBatch()">Create</button>
+    </div>
+
+    <div id="addMember" class="section">
+      <h2>Add Member</h2>
+      <select id="batchSelect"></select>
+      <input id="memberName" placeholder="Name">
+      <input id="phone" placeholder="Phone">
+      <select id="paymentStatus"><option>Paid</option><option>Not Paid</option><option>Partial</option></select>
+     
+<input id="chittiMonth" type="month" placeholder="Month">
+      <select id="chittiStatus"><option>Taken</option><option>Not Taken</option></select>
+      <input id="amountPaid" placeholder="Amount">
+      <button onclick="addMember()">Add</button>
+    </div>
+
+    <div id="viewMembers" class="section">
+      <h2>View/Edit/Delete Members</h2>
+      <select id="viewBatchSelect" onchange="loadMembers()"></select>
+      <input id="searchInput" placeholder="Search name or phone">
+      <button onclick="searchMembers()">Search</button>
+      <button onclick="loadMembers()">Reset</button>
+
+      <table id="membersTable">
+        <thead>
+          <tr>
+            <th>Name</th><th>Phone</th><th>Status</th><th>Month</th><th>Chitti</th><th>Amount</th><th colspan="2">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="addWinner" class="section">
+      <h2>Add Winner</h2>
+      <select id="winnerBatch"></select>
+      <input id="winnerName" placeholder="Name">
+      <input id="winnerAmount" placeholder="Amount">
+      <button onclick="addWinner()">Submit</button>
+    </div>
+
+    <div id="alerts" class="alerts-section"></div>
+  </div>
+</body>
+</html>

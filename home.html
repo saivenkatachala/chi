@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitti Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-hand-holding-usd"></i> Chitti Management System</h1>
+        <button id="logoutBtn" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </header>
+    
+    <div class="container">
+        <div class="welcome-message">
+            <h2>Welcome to Chitti Management System</h2>
+            <p>Manage your chitti groups efficiently</p>
+        </div>
+        
+        <div class="action-buttons">
+            <button id="addBatchBtn" class="btn"><i class="fas fa-plus-circle"></i> Add New Batch</button>
+            <button id="addMemberBtn" class="btn"><i class="fas fa-user-plus"></i> Add Members</button>
+            <button id="viewMembersBtn" class="btn"><i class="fas fa-users"></i> View Members</button>
+            <button id="addWinnerBtn" class="btn"><i class="fas fa-trophy"></i> Add Chitti Winner</button>
+        </div>
+        
+        <div class="modal" id="batchModal">
+            <!-- Modal content for adding batch -->
+        </div>
+        
+        <div class="modal" id="memberModal">
+            <!-- Modal content for adding member -->
+        </div>
+        
+        <div class="modal" id="winnerModal">
+            <!-- Modal content for adding winner -->
+        </div>
+        
+        <div id="alertsSection">
+            <!-- Chitti winner alerts will appear here -->
+        </div>
+        
+        <div id="membersTableContainer" class="table-container">
+            <!-- Members table will be displayed here -->
+        </div>
+    </div>
+    <script>
+        // Initialize Google Apps Script connection
+        window.onload = function() {
+          google.script.url.getLocation(function(location) {
+            // If not embedded, redirect to the web app version
+            if (!location.parameter.embedded) {
+              window.location.href = 'https://script.google.com/macros/s/AKfycbyLQ1RTasLmgSMDY0Qgz01BqMSyrEjOCQrV9Hbqz3TDPHljt6GEJTDm2yViXoo8qVRg/exec';
+            }
+          });
+        };
+      </script>
+    
+    <script src="script.js"></script>
+    <script src="google-apps.js"></script>
+</body>
+</html>
